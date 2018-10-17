@@ -36,7 +36,8 @@ _runStaticAnalysis() {
 	tslint --project .
 }
 
-_unitTests() {
+_tests() {
+	# TODO: "$ npm test" would probably be more idiomatic?
 	node tests.js
 }
 
@@ -91,7 +92,7 @@ standardBuildProcess() {
 
 	buildstep checkFormatting
 
-	buildstep unitTests
+	buildstep tests
 
 	buildstep makeZip
 
