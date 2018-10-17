@@ -12,7 +12,6 @@
 		"interface-name": false,
 		"max-classes-per-file": false,
 		"object-literal-sort-keys": false,
-		"no-unused-variable": true,
 		"no-void-expression": true,
 		"max-line-length": false,
 		"no-consecutive-blank-lines": false,
