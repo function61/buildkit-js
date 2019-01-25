@@ -11,6 +11,7 @@ ENV NODE_PATH=/usr/local/lib/node_modules
 
 RUN apt update && apt install -y zip \
 	&& npm install -g  \
+		yarn@1.12.3 \
 		typescript@3.1.1 \
 		tslint@5.11.0 \
 		aws-sdk@2.290.0 \
