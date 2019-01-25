@@ -10,8 +10,6 @@ ENV NODE_PATH=/usr/local/lib/node_modules
 # 	https://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html
 
 RUN apt update && apt install -y zip \
-	&& curl --location --fail -o /usr/local/bin/jfrog-cli "https://bintray.com/jfrog/jfrog-cli-go/download_file?file_path=1.20.1%2Fjfrog-cli-linux-amd64%2Fjfrog" \
-	&& chmod +x /usr/local/bin/jfrog-cli \
 	&& npm install -g  \
 		typescript@3.1.1 \
 		tslint@5.11.0 \
