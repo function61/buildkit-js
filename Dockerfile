@@ -19,6 +19,7 @@ RUN apt update && apt install -y zip \
 		aws-sdk@2.290.0 \
 		@types/node@8.10.34 \
 		@types/aws-lambda@8.10.13 \
+	&& chmod +x /usr/local/bin/yarn \
 	&& ln -s /usr/local/lib/node_modules /node_modules
 
 # /node_modules symlink trick because TypeScript compiler doesn't seem to use NODE_PATH

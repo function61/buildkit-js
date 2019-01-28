@@ -25,6 +25,10 @@ _setupReleaseDirectory() {
 	mkdir -p rel/
 }
 
+_fetchDependencies() {
+	yarn install
+}
+
 _compileTypescript() {
 	tsc --project .
 }
@@ -44,6 +48,8 @@ standardBuildProcess() {
 	buildstep copyTsConfigAndTslint "$profile"
 
 	buildstep setupReleaseDirectory
+
+	buildstep fetchDependencies
 
 	buildstep compileTypescript
 
