@@ -47,7 +47,7 @@ _tests() {
 }
 
 standardBuildProcess() {
-	local profile="$0"
+	local profile="$1"
 
 	buildstep copyTsConfigAndTslint "$profile"
 
