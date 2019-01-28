@@ -5,7 +5,8 @@ buildstep() {
 
 	echo "# $fn"
 
-	"_$fn"
+	shift
+	"_$fn" "$@"
 }
 
 _configure() {
