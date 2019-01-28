@@ -40,10 +40,6 @@ _tests() {
 	node tests.js
 }
 
-_cleanupHacks() {
-	rm -rf tsconfig.json tslint.json
-}
-
 standardBuildProcess() {
 	buildstep configure
 
@@ -56,6 +52,4 @@ standardBuildProcess() {
 	buildstep checkFormatting
 
 	buildstep tests
-
-	buildstep cleanupHacks
 }
