@@ -3,5 +3,8 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"arrowParens": "always",
+	"jsxBracketSameLine": true,
+	"endOfLine": "lf",
+	"printWidth": 100,
 	"trailingComma": "all"
 }
