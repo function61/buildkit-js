@@ -24,6 +24,7 @@ RUN apt update && apt install -y zip \
 
 ADD build-common.sh /build-common.sh
 
+COPY tsconfigs /etc/tsconfigs
+
 ADD prettier-config.json /etc/prettier-config.json
-ADD tsconfig.json /etc/tsconfig.json
 ADD tslint.json /etc/tslint.json

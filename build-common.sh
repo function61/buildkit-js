@@ -9,9 +9,16 @@ buildstep() {
 	"_$fn" "$@"
 }
 
-_configure() {
-	cp /etc/tsconfig.json .
-	cp /etc/tslint.json .
+_copyTsConfigAndTslint() {
+	local profile="$1"
+
+	if [ ! -f tsconfig.json ]; then
+		cp "/etc/tsconfigs/tsconfig-${profile}.json" tsconfig.json
+	fi
+
+	if [ ! -f tslint.json ]; then
+		cp /etc/tslint.json .
+	fi
 }
 
 _checkFormatting() {
@@ -40,7 +47,9 @@ _tests() {
 }
 
 standardBuildProcess() {
-	buildstep configure
+	local profile="$0"
+
+	buildstep copyTsConfigAndTslint "$profile"
 
 	buildstep setupReleaseDirectory
 

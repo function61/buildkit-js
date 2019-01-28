@@ -1,0 +1,29 @@
+{
+	"compilerOptions": {
+		"strict": true, // => noImplicitAny, noImplicitThis, alwaysStrict, strictNullChecks, strictFunctionTypes, strictPropertyInitialization
+		"module": "amd",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"outFile": "../public/build.js",
+		"baseUrl": ".",
+		"moduleResolution": "Node",
+		"jsx": "React",
+		"jsxFactory": "React.createElement",
+		"sourceMap": true,
+		"lib": [
+			"es2016",
+			"dom"
+		]
+	},
+	"include": [
+		"**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"**/*.spec.ts"
+	]
+}
