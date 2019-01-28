@@ -36,8 +36,7 @@ _runStaticAnalysis() {
 }
 
 _tests() {
-	# TODO: "$ npm test" would probably be more idiomatic?
-	node tests.js
+	npm test --no-update-notifier
 }
 
 standardBuildProcess() {
