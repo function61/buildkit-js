@@ -14,8 +14,9 @@ RUN apt update && apt install -y zip \
 		yarn@1.12.3 \
 		typescript@3.1.1 \
 		tslint@5.11.0 \
-		aws-sdk@2.290.0 \
+		tslint-plugin-prettier@2.0.1 \
 		prettier@1.15.3 \
+		aws-sdk@2.290.0 \
 		@types/node@8.10.34 \
 		@types/aws-lambda@8.10.13 \
 	&& ln -s /usr/local/lib/node_modules /node_modules

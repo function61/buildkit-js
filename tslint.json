@@ -1,12 +1,11 @@
 {
-	"linterOptions": {
-		"exclude": [
-		]
-	},
 	"extends": [
-		"tslint:recommended"
+		"tslint:recommended",
+		"tslint-plugin-prettier"
 	],
 	"rules": {
+		"prettier": [true, "/etc/prettier-config.json"],
+		"linebreak-style": [true, "LF"],
 		"member-access": false,
 		"indent": [true, "tabs"],
 		"interface-name": false,

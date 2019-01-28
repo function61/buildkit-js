@@ -16,7 +16,5 @@ Contains
 - [TypeScript](https://www.typescriptlang.org/) compiler & some @types
 - [Prettier](https://prettier.io/) to standardize code formatting
 - [tslint](https://palantir.github.io/tslint/) for static analysis
-- [jfrog-cli](https://github.com/jfrog/jfrog-cli-go) to upload artefacts to
-  [Bintray](https://bintray.com/) (e.g. .zip files for Lambda)
 - Build script to standardize build process across projects
-- Standardized configuration for ensuring highest possible quality code
+- Standardized TypeScript/tslint/Prettier configuration for ensuring highest possible quality code

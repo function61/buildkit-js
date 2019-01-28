@@ -21,15 +21,6 @@ _copyTsConfigAndTslint() {
 	fi
 }
 
-_checkFormatting() {
-	local offenders=$(prettier --list-different --config /etc/prettier-config.json '**/*.ts' '**/*.tsx')
-
-	if [ ! -z "$offenders" ]; then
-		>&2 echo "formatting errors: $offenders"
-		exit 1
-	fi
-}
-
 _setupReleaseDirectory() {
 	mkdir -p rel/
 }
@@ -39,6 +30,7 @@ _compileTypescript() {
 }
 
 _runStaticAnalysis() {
+	# code formatting (prettier.io) is also checked here
 	tslint --project .
 }
 
@@ -56,8 +48,6 @@ standardBuildProcess() {
 	buildstep compileTypescript
 
 	buildstep runStaticAnalysis
-
-	buildstep checkFormatting
 
 	buildstep tests
 }
