@@ -1,7 +1,7 @@
 # closest to AWS Lambda that has 8.10
 FROM node:8.11.4-slim
 
-WORKDIR /app
+WORKDIR /workspace
 
 # it boggles my mind, why this is left unconfigured in official node image..
 ENV NODE_PATH=/usr/local/lib/node_modules
