@@ -23,9 +23,7 @@ _checkFormatting() {
 }
 
 _setupReleaseDirectory() {
-	rm -rf rel
-
-	mkdir rel
+	mkdir -p rel/
 }
 
 _compileTypescript() {
