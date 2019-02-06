@@ -15,7 +15,8 @@
 		"max-line-length": false,
 		"no-consecutive-blank-lines": false,
 		"no-switch-case-fall-through": true,
-		"semicolon": true,
+		// ignore-bound-class-methods because otherwise prettier.io and tslint would do conflicting fixes
+		"semicolon": [true, "always", "ignore-bound-class-methods"],
 		"trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
 		"switch-default": true,
 		"no-floating-promises": true,
