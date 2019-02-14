@@ -34,7 +34,7 @@ _tscCompile() {
 }
 
 _webpackCompile() {
-	webpack
+	webpack --mode production
 }
 
 _runStaticAnalysis() {
