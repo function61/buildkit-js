@@ -24,7 +24,8 @@ RUN apt update && apt install -y zip \
 
 # /node_modules symlink trick because TypeScript compiler doesn't seem to use NODE_PATH
 
-ADD build-common.sh /build-common.sh
+ADD bin/build-common.sh /build-common.sh
+ADD bin/tslint.sh /usr/local/bin/tslint.sh
 
 COPY tsconfigs /etc/tsconfigs
 
