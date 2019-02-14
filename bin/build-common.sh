@@ -29,8 +29,12 @@ _fetchDependencies() {
 	yarn install
 }
 
-_compileTypescript() {
+_tscCompile() {
 	tsc --project .
+}
+
+_webpackCompile() {
+	webpack
 }
 
 _runStaticAnalysis() {
@@ -51,7 +55,13 @@ standardBuildProcess() {
 
 	buildstep fetchDependencies
 
-	buildstep compileTypescript
+	# for frontend profiles, use Webpack to bundle the code,
+	# for other targets (like Node.js / Lambda, just use TypeScript directly)
+	if [ "$profile" = "frontend" ]; then
+		buildstep webpackCompile
+	else
+		buildstep tscCompile
+	fi
 
 	buildstep runStaticAnalysis
 

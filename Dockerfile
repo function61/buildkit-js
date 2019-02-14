@@ -19,6 +19,11 @@ RUN apt update && apt install -y zip \
 		aws-sdk@2.290.0 \
 		@types/node@8.10.34 \
 		@types/aws-lambda@8.10.13 \
+		webpack@4.29.3 \
+		webpack-cli@3.2.3 \
+		ts-loader@5.3.3 \
+		tsconfig-paths-webpack-plugin@3.2.0 \
+		circular-dependency-plugin@5.0.2 \
 	&& chmod +x /usr/local/bin/yarn \
 	&& ln -s /usr/local/lib/node_modules /node_modules
 
