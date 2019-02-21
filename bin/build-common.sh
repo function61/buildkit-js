@@ -46,6 +46,8 @@ _tests() {
 	npm test --no-update-notifier
 }
 
+# FASTBUILD ENV skips steps that aren't usually strictly necessary when doing minor modifications.
+# however, if you encounter a bug, remember to run full build for static analysis etc., tests etc.
 standardBuildProcess() {
 	local profile="$1"
 
@@ -53,7 +55,9 @@ standardBuildProcess() {
 
 	buildstep setupReleaseDirectory
 
-	buildstep fetchDependencies
+	if [ ! -n "${FASTBUILD:-}" ]; then
+		buildstep fetchDependencies
+	fi
 
 	# for frontend profiles, use Webpack to bundle the code,
 	# for other targets (like Node.js / Lambda, just use TypeScript directly)
@@ -63,7 +67,9 @@ standardBuildProcess() {
 		buildstep tscCompile
 	fi
 
-	buildstep runStaticAnalysis
+	if [ ! -n "${FASTBUILD:-}" ]; then
+		buildstep runStaticAnalysis
 
-	buildstep tests
+		buildstep tests
+	fi
 }
