@@ -1,5 +1,6 @@
-# closest to AWS Lambda that has 8.10
-FROM node:8.11.4-slim
+# closest to AWS Lambda (Lambda has 8.10)
+# used to use 8.11.4-slim but "apt update" stopped working
+FROM node:8.15-slim
 
 WORKDIR /workspace
 
