@@ -7,7 +7,9 @@
 		"prettier": [true, "/etc/prettier-config.json"],
 		"linebreak-style": [true, "LF"],
 		"member-access": false,
-		"indent": [true, "tabs"],
+		// no sense in checking indentation since Prettier takes takes care of formatting,
+		// and in fact in some cases trips up "indentation should be tabs" by using spaces
+		"indent": false,
 		"interface-name": false,
 		"max-classes-per-file": false,
 		"object-literal-sort-keys": false,
