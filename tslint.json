@@ -16,6 +16,7 @@
 		"no-void-expression": true,
 		"max-line-length": false,
 		"no-consecutive-blank-lines": false,
+		"no-duplicate-imports": true,
 		"no-switch-case-fall-through": true,
 		// ignore-bound-class-methods because otherwise prettier.io and tslint would do conflicting fixes
 		"semicolon": [true, "always", "ignore-bound-class-methods"],
