@@ -8,6 +8,21 @@ See [Turbo Bob](https://github.com/function61/turbobob) for more details.
 Tool versions are selected to closely match AWS Lambda to try to guarantee dev/prod parity.
 
 
+Version pinning
+---------------
+
+[NPM doesn't support our use case of installing global dependencies from package.json](https://stackoverflow.com/q/14657170),
+so we to specify the `node_modules` to install in our `Dockerfile` instead. It'd be painful
+without `package.json` to update the packages so we have to compromise and get the latest
+packages (= not pin versions).
+
+Effectively the versions will be pinned though by the virtue of our Docker image immutability.
+
+Why do we want to do this: if we have multiple projects wanting to use the same kind of
+infrastructure that this base image delivers, it'd be painful to manage all the base stuff
+separately in each project (like NPM tries to force us into).
+
+
 Contains
 --------
 
