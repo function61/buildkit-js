@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/function61/buildkit-js.svg?style=for-the-badge)](https://travis-ci.org/function61/buildkit-js)
+![Build status](https://github.com/function61/buildkit-js/workflows/Build/badge.svg)
 [![Download](https://img.shields.io/docker/pulls/fn61/buildkit-js.svg?style=for-the-badge)](https://hub.docker.com/r/fn61/buildkit-js/)
 
 JavaScript buildkit - frequently used compile tools for standardization across our projects.
