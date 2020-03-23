@@ -26,7 +26,8 @@ _setupReleaseDirectory() {
 }
 
 _fetchDependencies() {
-	yarn install
+	# --no-bin-links because symlinks don't work over Vagrant shared folders
+	npm install --no-bin-links
 }
 
 _tscCompile() {
